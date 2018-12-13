@@ -8,6 +8,8 @@ Note: When the player wins, increase the Wins counter and start the game over ag
 Note: When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
 */
 
+//CAPS INDICATE CODE THAT NEED TO BE ADDED OR FIXED
+
 // GUESS WHAT LETTER - Varible or array listing alphabet
 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -24,10 +26,10 @@ var guessesLeft = 0;
 var guessesSoFar = 0;
 
 // Create variables that hold references to the places in the HTML where we want to display things.
-        var wins = document.getElementByClass("wins");
-        var losses = document.getElementByClass("losses");
-        var guessesLeft = document.getElementByClass("guessesLeft");
-        var guessesSoFar = document.getElementByClass("guessesSoFar");
+        var wins = document.getElementById("wins");
+        var losses = document.getElementById("losses");
+        var guessesLeft = document.getElementById("guessesLeft");
+        var guessesSoFar = document.getElementById("guessesSoFar");
 
 // select random letter via for loop and randomMath function ???
 
@@ -42,7 +44,7 @@ var guessesSoFar = 0;
 function makeid(l)
 {
 var text = "";
-var computerGuess = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var computerGuess = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 for(var i=0; i < l; i++ )
 {
 text += computerGuess.charAt(Math.floor(Math.random() * computerGuess.length));
@@ -51,9 +53,11 @@ return text;
 }
 console.log(makeid(1));
 
-// function to convert to lowercase
+/* function to convert to lowercase?
 
 var RANDOMMATHLower = RANDOMMATHGUESS.toLowerCase();
+
+*/
 
 // This function is run whenever the user presses a key.
         document.onkeyup = function(event) {
@@ -62,32 +66,40 @@ var RANDOMMATHLower = RANDOMMATHGUESS.toLowerCase();
           var userGuess = event.key;
 
 // Created a prompt to get the user's quess.
-        var userGuess = prompt("Which letter am I thinking of?");
+        var userGuess = prompt("Which UPPERCASE letter am I thinking of?");
 
-        // Converts the user's answer to lowercase.
-        var userGuessLower = userGuess.toLowerCase();
 
-/* if user selects matching letter assign a win to wins class (do while loop?), then reset game with initialize function
 
-if (alphabet.indexOf(userGuessLower) == RANDOMMATH) {
+      }
+
+/* if user selects matching letter assign a win to wins id (do while loop?), then reset game with initialize function
+
+if (alphabet.indexOf(userGuess) == computerGuess) {
           ASSIGN A WIN;
         }
 */
 //or
 
-// This logic determines the outcome of the game (wins/losses), and increments the appropriate number
-         if ((userGuessLower === "computerGuess")
+/* This logic determines the outcome of the game (wins/losses), and increments the appropriate number
+         if ((userGuess === "computerGuess")
 
-           if ((userGuessLower === "0" && computerGuess === "0") {
+           if ((userGuess === "0" && computerGuess === "0") {
              wins++;
 
-             INITIALIZE HERE?
-
            }
+
+//             INITIALIZE HERE with do/while loop? Edit sample below
+
+          function functionName(a){
+          var len = a.length, i=0;
+          if (len == 0)
+          SOMETHING other than console.log("Empty Array");
+        }
 
            else {
              losses++;
            }
+
 
 //or
 
@@ -95,6 +107,7 @@ if (alphabet.indexOf(userGuessLower) == RANDOMMATH) {
 The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
 
 Syntax
+
 do {
   code block to be executed
 }
@@ -125,18 +138,20 @@ for (var i = arr.length; i > 0; i--) {
 console.log(arr); //[]
 */
 
-// else subtract one from guesses left class length,
+/* else subtract one from guesses left id length,
 
 else {
           SUBTRACT(#guessesLeft LENGTH)
         }
+*/
 
 // print the letter the user selected with document.write?
 
-// Display the user guesses so far.
+/* Display the user guesses so far.
             userGuessesSoFar.textContent = "The letters " + userGuess;
+*/
 
-// when guess left in guesses left class length equal zero (do while loop?) assign a loss (wins and losses conditions), and reset game with initialize function
+// when guess left in guesses left id length equal zero (do while loop?) assign a loss (wins and losses conditions), and reset game with initialize function
 
 /* EDIT TO RESET array
 
