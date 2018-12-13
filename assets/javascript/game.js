@@ -14,7 +14,7 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 
 var arrayLength = alphabet.length;
 
-console.log(aphabet.length);
+console.log(alphabet.length);
 
 // Creating variables to hold the number of wins, losses, guesses left, and guess so far. They start at 0.
 
@@ -31,13 +31,25 @@ var guessesSoFar = 0;
 
 // select random letter via for loop and randomMath function ???
 
-for (var aphabet = 0; j < arrayLength; alphabet++) {
+/* for (var aphabet = 0; j < arrayLength; alphabet++) {
 
 	// Randomly chooses a choice from the options array. This is the Computer's guess. EDIT BELOW
 
-	          var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+	  var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+}  OR
+*/
+function makeid(l)
+{
+var text = "";
+var computerGuess = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+for(var i=0; i < l; i++ )
+{
+text += computerGuess.charAt(Math.floor(Math.random() * computerGuess.length));
 }
+return text;
+}
+console.log(makeid(1));
 
 // function to convert to lowercase
 
@@ -55,25 +67,28 @@ var RANDOMMATHLower = RANDOMMATHGUESS.toLowerCase();
         // Converts the user's answer to lowercase.
         var userGuessLower = userGuess.toLowerCase();
 
-// if user selects matching letter assign a win to wins class (do while loop?), then reset game with initialize function
+/* if user selects matching letter assign a win to wins class (do while loop?), then reset game with initialize function
 
 if (alphabet.indexOf(userGuessLower) == RANDOMMATH) {
           ASSIGN A WIN;
         }
-
+*/
 //or
 
 // This logic determines the outcome of the game (wins/losses), and increments the appropriate number
-         if ((userGuessLower === "computerGuess") {
+         if ((userGuessLower === "computerGuess")
 
            if ((userGuessLower === "0" && computerGuess === "0") {
              wins++;
 
              INITIALIZE HERE?
 
-           } else {
+           }
+
+           else {
              losses++;
            }
+
 //or
 
 /* The Do/While Loop USE THIS???

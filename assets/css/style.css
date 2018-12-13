@@ -1,4 +1,10 @@
 h1 {
     font-size: 44px;
     color: red;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+h1, p {
+  margin-left: 20px;
 }
