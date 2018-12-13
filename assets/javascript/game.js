@@ -61,9 +61,20 @@ if (alphabet.indexOf(userGuessLower) == RANDOMMATH) {
           ASSIGN A WIN;
         }
 
-or
+//or
 
+// This logic determines the outcome of the game (wins/losses), and increments the appropriate number
+         if ((userGuessLower === "computerGuess") {
 
+           if ((userGuessLower === "0" && computerGuess === "0") {
+             wins++;
+
+             INITIALIZE HERE?
+
+           } else {
+             losses++;
+           }
+//or
 
 /* The Do/While Loop USE THIS???
 The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
@@ -86,12 +97,41 @@ while (i < 10);
 Do not forget to increase the variable used in the condition, otherwise the loop will never end!
 */
 
+/* EDIT TO RESET array
+
+var arr = [1, 2, 3, 4, 5];
+
+for (var i = arr.length; i > 0; i--) {
+
+ arr.pop();
+
+}
+
+console.log(arr); //[]
+*/
+
 // else subtract one from guesses left class length,
 
 else {
           SUBTRACT(#guessesLeft LENGTH)
         }
 
-// print the letter the user selected with document.Write
+// print the letter the user selected with document.write?
+
+// Display the user guesses so far.
+            userGuessesSoFar.textContent = "The letters " + userGuess;
 
 // when guess left in guesses left class length equal zero (do while loop?) assign a loss (wins and losses conditions), and reset game with initialize function
+
+/* EDIT TO RESET array
+
+var arr = [1, 2, 3, 4, 5];
+
+for (var i = arr.length; i > 0; i--) {
+
+ arr.pop();
+
+}
+
+console.log(arr); //[]
+*/
