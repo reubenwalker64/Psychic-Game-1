@@ -53,7 +53,7 @@ return text;
 }
 console.log(makeid(1));
 
-/* function to convert to lowercase?
+/* function to convert to lowercase (if necessary)?
 
 var RANDOMMATHLower = RANDOMMATHGUESS.toLowerCase();
 

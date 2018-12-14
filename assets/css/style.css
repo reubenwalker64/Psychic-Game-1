@@ -12,7 +12,8 @@ h1, p {
 p {
   font-family: sans-serif;
   font-style: normal;
-  font-size: 18px;
+  font-size: 24px;
+  color: white;
 }
 
 #instructions {
@@ -20,4 +21,13 @@ p {
   font-family: sans-serif;
   font-style: oblique;
   font-size: 12px;
+}
+
+body {
+ background-image: url("https://media.gettyimages.com/photos/pictured-cohost-ed-mcmahon-with-host-johnny-carson-as-carnac-the-picture-id138414425");
+ background-size: cover;
+}
+
+#wins, #losses, #guessesLeft, #guessesSoFar {
+  text-align: center;
 }
